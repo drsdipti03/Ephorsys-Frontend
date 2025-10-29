@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EPHORSYS.COM</title>
+
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="/image/Ephorsys - Black.png"
+          alt="Ephorsys logo"
+          class="logo-img"
+        /><span class="company-name"><a href="/Home/index.html" class="nonne">Ephorsys</a></span>
+      </div>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/Home/index.html">Home</a></li>
+          <li>
+            <a href="/About Us/about.html">About Us</a>
+          </li>
+          <li class="dropdown">
+            <a href="#Services">Services ▼</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/Services/Custom software development/custom.html">Custom software development</a>
+              </li>
+              <li><a href="/Services/Web development/services.html">Web development</a></li>
+              <li><a href="/Services/Ui & ux design/uiux.html">Ui & ux design</a></li>
+              <li><a href="/Services/Mobile app development/moble.html">Mobile app development</a></li>
+              <li><a href="/Services/Content and branding/content.html">Content and branding</a></li>
+              <li><a href="/Services/Digital marketing/digital.html">Digital marketing</a></li>
+              <li><a href="/Services/SEO/seo.html">SEO</a></li>
+              <li><a href="/Services/Data and ai solution/data.html">Data and ai solution</a></li>
+            </ul>
+          </li>
+          <li><a href="/Carrier/carrier.html">Career</a></li>
+          <li><a href="/Contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        class="toggle-button"
+        aria-label="Toggle navigation"
+        onclick="toggleMenu()"
+      >
+        ☰
+      </button>
+    </header>
+
+    <!--  HOME contact  part -->
+    <section class="contact-hero">
+      <div class="overlay"></div>
+      <div class="content">
+        <h1>CONTACT US</h1>
+        <div class="breadcrumb">
+          <a href="/Home/index.html"><i class="fa-solid fa-house"></i> </a>
+          <!-- <span>/</span> -->
+
+          <a href="/Contact/contact.html" class="active">Contact Us</a>
+        </div>
+      </div>
+    </section>
+    <!-- contact section -->
+
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+
+      <div class="contact-container">
+        <div class="contact-info-card">
+          <h2>Get in touch</h2>
+          <p>We love to hear from you</p>
+
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <span class="info-text">business@ephorsys.com</span>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="info-text">Bhubaneswar, Odisha, India PIN-751001</span>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <span class="info-text">Monday-Friday 9am to 5pm 7873367335</span>
+          </div>
+
+          <div class="social-icons">
+            <a
+              href="http://www.linkedin.com/in/ephorsys-solutions-9926a7387"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="#https://www.facebook.com/profile.php?id=61581927317537"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UCnwjW32bxlyiTv-AnIgqSCA"
+              aria-label="youtube"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/ephorsysofficial?igsh=MTN3aXBjbG9pYjVjaw=="
+              aria-label="instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contactForm" action="#" method="POST">
+            <label for="name"><b>Name</b></label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name" />
+
+            <label for="phone"><b>Phone No</b></label>
+            <input type="tel" id="phone" name="phone" required maxlength="10" pattern="[0-9]{10}"  placeholder="Enter 10-digit phone number" />
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email"/>
+
+            <label for="message"><b>How can we help you</b></label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <button type="submit" class="contact-button">Contact</button>
+          </form>
+  
+          <p id="responseMsg" style="margin-top: 10px; color: green;"></p>
+        </div>
+
+      </div>
+    </section>
+
+    <script src="contactForm.js"></script>
+
+    <!-- footer section -->
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img
+            src="/image/Ephorsys Transparent.png"
+            alt="Ephorsys logo"
+            class="logo-img"
+          />
+          <span class="logo-text">Ephorsys</span>
+        </div>
+        <div class="footer-links-container">
+          <div class="footer-column">
+            <h4 class="column-title">Company</h4>
+            <ul>
+              <li>
+                <a href="/About Us/about.html">About us</a>
+              </li>
+              <li><a href="/Services/Web development/services.html">Services</a></li>
+              <li><a href="/Carrier/carrier.html">Career</a></li>
+              <li><a href="/Contact/contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="column-title">Social</h4>
+            <ul>
+              <li>
+                <a
+                  href="http://www.linkedin.com/in/ephorsys-solutions-9926a7387"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61581927317537"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCnwjW32bxlyiTv-AnIgqSCA"
+                  >Youtube</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ephorsysofficial?igsh=MTN3aXBjbG9pYjVjaw=="
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="column-title">Credits</h4>
+            <ul>
+              <li><a href="#">Reference</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2025 Ephorsys. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

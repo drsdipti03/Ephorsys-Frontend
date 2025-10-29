@@ -1,0 +1,399 @@
+/* ===== Global Reset ===== */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #222;
+} 
+
+/* ===== Navbar ===== */
+/* Reset */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  min-height: 100vh;
+} */
+.logo {
+  display: flex;
+  align-items: center; /* Vertically aligns the image and text */
+  /* gap: 10px; Adds space between the logo and the text */
+}
+.logo-img {
+  height: 85px;
+  width: 85px;
+}
+.nav-links a:hover {
+  color: #00aaff;
+}
+
+/* Active navigation state */
+.nav-links li a.active {
+  color: #00aaff;
+  border-bottom: 2px solid #00aaff;
+  padding-bottom: 3px;
+}
+
+
+.nonne {
+  text-decoration: none;
+  color: white;
+}
+.company-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+}
+
+/* Adjust the margin-top on the content area if you changed the logo-img height */
+.content-area {
+  margin-top: 85px;
+  padding: 20px 50px;
+  background-color: #111;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  background-color: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.logo-img {
+  height: 85px;
+  width: 85px;
+}
+.nav-links li a.active {
+  color: #00aaff;
+  border-bottom: 2px solid #00aaff;
+  padding-bottom: 3px;
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+  border-bottom: 2px solid #00aaff;
+  padding-bottom: 3px;
+}
+
+
+
+.nav-ls{
+   color: #fdfeff;
+  border-bottom: 2px solid #00aaff;
+  padding-bottom: 3px;
+}
+
+
+.nonne {
+  text-decoration: none;
+  color: white;
+}
+.nav-links {
+  display: flex;
+  
+}
+.nav-links li {
+  margin-left: 25px;
+  position: relative;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+  padding: 5px 0;
+  display: block;
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+}
+
+/* --- Dropdown Menu (Desktop) --- */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #111;
+  list-style: none;
+  border-top: 3px solid #00aaff;
+  z-index: 1001;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Show dropdown on hover (Desktop only) */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+  background: #00aaff;
+  color: #fff;
+}
+
+/* --- Toggle Button (Mobile) --- */
+.toggle-button {
+  background: none;
+  border: none;
+  color: #00aaff;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* ================================== */
+/* RESPONSIVE DESIGN (Mobile)         */
+/* ================================== */
+@media (max-width: 768px) {
+  header {
+    padding: 0px 20px;
+  }
+
+  .content-area {
+    margin-top: 100px; /* Adjust top margin for mobile header height */
+    padding: 20px;
+  }
+
+  .toggle-button {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%; /* FIX: Set top to 100% of the header height */
+    left: 0;
+    background-color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  /* Center text and set full width for mobile links */
+  .nav-links li {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  /* FIX 1: Mobile Dropdown Behavior */
+  .dropdown-menu {
+    display: none; /* Hide by default */
+    position: static; /* Allows it to flow naturally in the list */
+    background-color: #1a1a1a;
+    border-top: none;
+    box-shadow: none;
+    padding-left: 0; /* Reset desktop padding */
+  }
+  /* FIX 1: This rule is what shows the dropdown on mobile click */
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: none; /* Disable desktop hover */
+  }
+  .dropdown-menu li a {
+    padding-left: 20px; /* Indent sub-items from the center */
+    text-align: left; /* Align sub-items to the left */
+    font-size: 14px;
+  }
+}
+
+
+
+/* ===== Career Role Section ===== */
+.career-role {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 100px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.container h1 {
+  color: #006400;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.role-box h2 {
+  color: #004d26;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.role-box ul {
+  margin-left: 20px;
+  line-height: 1.8;
+}
+
+.apply-section {
+  background: #e8f5e9;
+  border-left: 5px solid #2ecc71;
+  padding: 15px 20px;
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+
+.apply-section a {
+  color: #006400;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.apply-section a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+
+
+
+/* --- Global Reset/Base Styles (Optional, but good practice) --- */
+.footer {
+  font-family: Arial, sans-serif; /* A simple, common font */
+  color: #fff; /* White text */
+  background-color: #222; /* Dark background color (close to the image) */
+  padding-top: 40px;
+  margin-top: 15px; /* Top padding for the main section */
+}
+
+.footer a {
+  color: #ccc; /* Slightly lighter white for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer a:hover {
+  color: #fff; /* White on hover */
+}
+
+.footer ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+/* --- Footer Top Section Layout (Uses Flexbox) --- */
+.footer-top {
+  display: flex;
+  justify-content: space-between; /* Puts space between the logo and link columns */
+  max-width: 1200px; /* Max width for content (adjust as needed) */
+  margin: 0 auto; /* Center the content */
+  padding: 0 20px 40px; /* Horizontal padding and bottom padding */
+  border-bottom: 1px solid #333; /* Separator line from the image */
+}
+
+/* --- Logo Styling --- */
+.footer-logo {
+  display: flex;
+  align-items: center; /* Vertically align logo image and text */
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo-img {
+  height: 85px; /* Adjust size as needed */
+  width: 85px;
+  margin-right: 8px;
+  /* You would need to ensure the path/to/byteiq-logo.png exists or replace with an SVG/text logo */
+}
+
+/* --- Footer Links Columns Container --- */
+.footer-links-container {
+  display: flex;
+  gap: 80px; /* Space between the link columns */
+}
+
+.column-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-column li {
+  margin-bottom: 8px; /* Space between list items */
+}
+
+/* --- Footer Bottom (Copyright Bar) --- */
+.footer-bottom {
+  background-color: #1a1a1a; /* Slightly darker or same as top, based on image */
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9em;
+  color: #aaa; /* Lighter color for copyright text */
+}
+
+/* --- Responsiveness: Mobile/Tablet View --- */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column; /* Stacks logo and links vertically */
+    padding-bottom: 30px;
+  }
+
+  .footer-links-container {
+    flex-direction: column; /* Stacks the three link columns vertically */
+    gap: 0; /* Remove horizontal gap */
+    margin-top: 30px; /* Space between logo and first column */
+  }
+
+  .footer-logo {
+    margin-bottom: 20px; /* Space below the logo */
+  }
+
+  .footer-column {
+    margin-bottom: 20px; /* Space between stacked columns */
+  }
+}
+
+/* --- Responsiveness: Small Mobile View (optional) --- */
+@media (max-width: 480px) {
+  .footer-top {
+    padding: 0 15px 30px;
+  }
+}
+.nonne {
+  text-decoration: none;
+  color: white;
+}
